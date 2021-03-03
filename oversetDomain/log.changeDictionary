@@ -1,0 +1,58 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : v2006 OPENFOAM=2006
+Arch   : "LSB;label=32;scalar=64"
+Exec   : changeDictionary
+Date   : Jul 19 2020
+Time   : 11:26:04
+Host   : f9d6ac12c79b
+PID    : 702
+I/O    : uncollated
+Case   : /mnt/secondary/simForYouTube/overset/oversetDomain
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Read dictionary changeDictionaryDict with replacements for dictionaries 1(boundary)
+Reading polyMesh/boundary file to extract patch names
+Loaded dictionary boundary with entries 3(valve sides frontAndBack2)
+Replacing entries in dictionary boundary
+Special handling of boundary as polyMesh/boundary file.
+Merging entries from 3(frontAndBack2 sides valve)
+fieldDict:
+{
+    valve
+    {
+        type            wall;
+        nFaces          200;
+        startFace       8690;
+    }
+    sides
+    {
+        type            overset;
+        nFaces          420;
+        startFace       8890;
+    }
+    frontAndBack2
+    {
+        type            empty;
+        nFaces          9000;
+        startFace       9310;
+    }
+}
+
+Writing modified boundary
+
+End
+

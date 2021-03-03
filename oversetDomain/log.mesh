@@ -1,0 +1,75 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : v2006 OPENFOAM=2006
+Arch   : "LSB;label=32;scalar=64"
+Exec   : ideasUnvToFoam overset.unv
+Date   : Jul 19 2020
+Time   : 11:26:02
+Host   : f9d6ac12c79b
+PID    : 700
+I/O    : uncollated
+Case   : /mnt/secondary/simForYouTube/overset/oversetDomain
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Processing tag:164
+Starting reading units at line 3.
+l:1
+units:"  SI: Meter (newton)"
+unitType:2
+Unit factors:
+    Length scale       : 1
+    Force scale        : 1
+    Temperature scale  : 1
+    Temperature offset : 273.15
+
+
+Processing tag:2420
+Skipping tag 2420 on line 9
+Skipping section at line 9.
+
+Processing tag:2411
+Starting reading points at line 20.
+Read 9620 points.
+
+Processing tag:2412
+Starting reading cells at line 19263.
+First occurrence of element type 11 for cell 1 at line 19264
+First occurrence of element type 44 for cell 1697 at line 24352
+First occurrence of element type 115 for cell 11537 at line 44032
+Read 4500 cells and 9840 boundary faces.
+
+Processing tag:2467
+Starting reading patches at line 53034.
+For group 1 named valve trying to read 200 patch face indices.
+For group 2 named sides trying to read 420 patch face indices.
+For group 3 named frontAndBack2 trying to read 9000 patch face indices.
+For group 4 named oversetDomain trying to read 4500 patch face indices.
+
+Of 9840 so-called boundary faces 220 belong to two cells and are therefore internal
+Sorting boundary faces according to group (patch)
+0: valve is patch
+1: sides is patch
+2: frontAndBack2 is patch
+3: oversetDomain is cellZone
+
+Constructing mesh with non-default patches of size:
+    valve	200
+    sides	420
+    frontAndBack2	9000
+
+Adding cell and face zones
+ Cell Zone oversetDomain 	4500
+
+End
+

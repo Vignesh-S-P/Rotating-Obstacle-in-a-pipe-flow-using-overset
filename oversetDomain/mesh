@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo -e "Meshing from File"
+
+ideasUnvToFoam overset.unv >&1 | tee log.mesh
+
+echo -e "Changing patch type"
+
+changeDictionary >&1 | tee log.changeDictionary
+
